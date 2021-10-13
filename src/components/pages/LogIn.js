@@ -13,6 +13,7 @@ const LogIn = () => {
             username: username,
             password: password
         }
+
         axios.post('https://api.getcountapp.com/api/v1/authenticate', user).then((response) => {
             localStorage.setItem('user', response.data)
             history.push("/home");
@@ -20,9 +21,6 @@ const LogIn = () => {
             setError("Failed to login!")
         })
     }
-
-    console.log("LEA")
-
     return(
         <>
             <input onChange={(data) => {setUsername(data.target.value)}} />

@@ -14,6 +14,7 @@ const Home = () => {
         localStorage.removeItem('user');
         history.push('/')
     }
+    
     return(
         <>
             <h1>{message}</h1>
